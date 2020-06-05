@@ -19,6 +19,13 @@ const game = () => {
     const options = document.querySelectorAll('.options button');
     const player = document.querySelector('.player-icon');
     const comp = document.querySelector('.comp-icon');
+    const icons = document.querySelectorAll('.icons img');
+
+    icons.forEach((icon) => {
+      icon.addEventListener('animationend', function () {
+        this.style.animation = '';
+      });
+    });
     //Comp options
     const compOptions = ['rock', 'paper', 'scissors'];
 
@@ -27,11 +34,16 @@ const game = () => {
         const compNum = Math.floor(Math.random() * 3);
         const compChoice = compOptions[compNum];
         //Activate update text
-        compareIcons(this.textContent, compChoice);
+        setTimeout(() => {
+          compareIcons(this.textContent, compChoice);
 
-        //Update Images
-        player.src = `./assets/${this.textContent}.png`;
-        comp.src = `./assets/${compChoice}.png`;
+          //Update Images
+          player.src = `./assets/${this.textContent}.png`;
+          comp.src = `./assets/${compChoice}.png`;
+        }, 2000);
+        //Animation
+        player.style.animation = 'shakePlayer 2s ease';
+        comp.style.animation = 'shakeComp 2s ease';
       });
     });
 
