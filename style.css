@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+section {
+  height: 100vh;
+  background: rgb(94, 87, 205);
+  background: radial-gradient(
+    circle,
+    rgba(94, 87, 205, 1) 0%,
+    rgba(26, 110, 209, 1) 100%
+  );
+  font-family: 'VT323', monospace;
+}
+
+.title {
+  color: black;
+}
+
+.score {
+  color: rgb(61, 198, 138);
+}
+.score,
+.title {
+  height: 15vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  letter-spacing: 3px;
+}
+
+.score h2 {
+  font-size: 3em;
+}
+
+.score p {
+  text-align: center;
+  padding: 5px;
+  font-size: 2.5em;
+}
+
+.intro {
+  height: 50vh;
+  color: rgb(61, 198, 138);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  transition: opacity 0.5s ease 0.5s;
+}
+
+.intro h1 {
+  font-size: 2em;
+}
+
+.intro button {
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  font-family: 'VT323', monospace;
+  cursor: pointer;
+  outline: none;
+  background: rgb(61, 198, 138);
+}
+
+.match {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.5s ease 0.5s;
+}
+
+.winner {
+  color: rgb(61, 198, 138);
+  text-align: center;
+  font-size: 2em;
+}
+
+.options,
+.icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.icons {
+  height: 30vh;
+  margin-bottom: 5vh;
+}
+
+.options button {
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  font-family: 'VT323', monospace;
+  cursor: pointer;
+  outline: none;
+  background: rgb(61, 198, 138);
+}
+
+.padding {
+  width: 20vw;
+}
+
+.comp-icon {
+  transform: rotateY(180deg);
+}
+
+div.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+}
+
+div.fadeIn {
+  opacity: 1;
+  pointer-events: all;
+}
