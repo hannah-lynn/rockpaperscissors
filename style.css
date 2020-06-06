@@ -42,7 +42,7 @@ section {
 }
 
 .intro {
-  height: 50vh;
+  height: 40vh;
   color: rgb(61, 198, 138);
   display: flex;
   flex-direction: column;
